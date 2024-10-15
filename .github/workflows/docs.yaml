@@ -24,6 +24,7 @@ jobs:
         run: |
           pip install -r requirements-doc.txt
           sphinx-multiversion docs docs-build
+          cp docs/_templates/gh-pages-redirect.html docs-build/index.html
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
